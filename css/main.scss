@@ -1,0 +1,66 @@
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --btm-block-margin: 5em;
+}
+body {
+    background-color:black;
+    color:#DFDFDF;
+    margin-top: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Montserrat;
+    width: 6.27in;
+
+    .header {
+        text-align: center;
+        margin-bottom: var(--btm-block-margin);
+        
+        .main-header {
+            font-size: x-large;
+            margin-bottom: .2em;
+        }
+        .sub-header {
+            font-style: italic;
+            font-size: small;
+        }
+    }
+
+    p {
+        text-align: justify;
+        line-height: 1.8;
+        margin-bottom: var(--btm-block-margin);
+        // background-color: rosybrown;
+    }
+    
+    .emph-block {
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        margin-bottom: 0;
+    }
+    .btm-hr {
+        margin-bottom: var(--btm-block-margin);
+    }
+
+    // header
+    h1 {
+        font-size: 1.3em;
+        margin-bottom: -.5em;
+    }
+    mark {
+        background-color: #CC0000;
+        font-weight: bolder;
+    }
+
+    .default-svg {
+        align-content: center;
+    }
+
+    
+}
+iframe {
+    display: block;
+    margin: 0 auto;
+}
+
