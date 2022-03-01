@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 :root {
-    --btm-block-margin: 5em;
+    --btm-block-margin: 4em;
 }
 body {
     background-color:black;
@@ -19,6 +19,7 @@ body {
         
         .main-header {
             font-size: x-large;
+            letter-spacing: .13em;
             margin-bottom: .2em;
         }
         .sub-header {
@@ -29,7 +30,7 @@ body {
 
     p {
         text-align: justify;
-        line-height: 1.8;
+        line-height: 1.7;
         margin-bottom: var(--btm-block-margin);
         // background-color: rosybrown;
     }
@@ -37,7 +38,9 @@ body {
     .emph-block {
         text-align: center;
         font-family: 'Courier New', Courier, monospace;
-        margin-bottom: 0;
+        margin-bottom: 0px;
+        margin-top: 0px;
+
     }
     .btm-hr {
         margin-bottom: var(--btm-block-margin);
@@ -52,9 +55,42 @@ body {
         background-color: #CC0000;
         font-weight: bolder;
     }
+    ol {
+        margin-bottom: 1em;
+        line-height: 1.7;
+    }
+
+    a {
+        color: #DFDFDF;
+        // text-decoration: none;
+    }
 
     .default-svg {
-        align-content: center;
+        vertical-align:middle;
+        margin:0px 0px var(--btm-block-margin) 0px;
+    }
+    
+    .default-gif {
+        vertical-align:middle;
+        margin:0px 0px var(--btm-block-margin) 0px;
+    }
+
+    .column {
+        float: left;
+        width: 49%;
+        text-align: center;
+      }
+    .column-spacer {
+        float: middle;
+        width: 2%;
+        background-color: #CC0000;
+      }
+      
+    /* Clear floats after the columns */
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
     }
 
     

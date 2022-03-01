@@ -14,20 +14,19 @@
             interfaces <br> from directional living neural networks
         </div>
         <div class="sub-header">
-            the short, non-academic-ish version
+            the short, non-academic-ish version, Simon Steffens
         </div>
     </section>
 
-    <img class="main-text">
+    <section class="main-text">
         <p>
             Considering the effort going into a master thesis, it is unfortunate
             that it's read by only a few people. Understandably so. Who wants to
             read 40-60 pages of dry academic English? This text attempts to
-            compress my work into a blogpost-like format that is accessible to a
+            compress my work into a blog post-like format that is accessible to a
             wider audience. The title was the last unnecessarily academically
             bloated thing, I promise.
         </p>
-        
         
         <hr class="top-hr">
         <p class="emph-block">
@@ -36,7 +35,6 @@
         <hr class="btm-hr">
 
         <h1><mark> What we are building</mark></h1>
-
         <p>
             The brain represents information in electrical signals (probably;
             we’re not 100% sure). Tapping into those electrical signals is
@@ -53,19 +51,660 @@
             (cyborg) life.
         </p>
 
-        <img class="default-svg" height=100% width=100% src="informationproblem.svg", alt="information flow asymmetry" />
+        <img class="default-svg" 
+             height=100% 
+             width=100% 
+             src="media/informationproblem.svg", 
+             alt="information flow asymmetry" />
         
-        <!-- <img src="../arch.png" /> -->
+        <p>
+            Compared to measuring signals, the <strong>delivery</strong> of
+            electrical signals works a lot less well right now. Applying a
+            voltage pulse through a metal electrode will activate entire brain
+            regions instead of single neurons. This spatial resolution is a
+            bottleneck when we want to <strong>pass a lot of
+            information</strong> to the brain. Think of someone who lost their
+            vision. To deliver even just a 32x32 px image into their brain one
+            needs to represent information of 1024 pixels! 
+        </p>
+
+        <p>
+            Our brain-stimulating interface does things quite a bit
+            differently. Instead of delivering stimulation through metal
+            electrodes, we grow new neurons into the brain that function as
+            <strong>living electrodes</strong>. If your first impulse is ‘that’s
+            bizarre’ - I am with you; it is an unconventional approach.  We can
+            control these artificially introduced neurons through an electrical
+            interface on the brain surface. The advantages are biocompatibility
+            and spatial stimulation resolution. But see for yourself.
+        </p>
+
+        <img class="default-gif" 
+             height=100% 
+             width=100% 
+             src="media/stim.gif", 
+             alt="information flow asymmetry" />
+                
+        <h1><mark> How we make a biohybrid implant</mark></h1>
+        <p>
+            One of the downsides is that the engineering behind the biohybrid
+            implant is quite challenging. Building things from biological
+            components like axons is hard because we lack accurate equations
+            that describe complex biological systems.  
+        </p>
+
+        <p>
+            The work presented here focuses on a specific engineering challenge
+            of the biohybrid implant. To conceptualize the problem, one needs to
+            better understand the inner workings of our device.
+        </p>
+
+        <p>
+            <strong>Component 1:</strong> The neurons we use for our implant are
+            <strong>retinal ganglion cells</strong> from embryonic rats. Why
+            those? Because one can easily culture them in a dish and their axons
+            grow quite fast. We use embryonic-, instead of adult ones since they
+            are more prone to form new connections.
+        </p>
+
+        <img class="default-svg" 
+            height=100% 
+            width=100% 
+            src="media/implant.svg", 
+            alt="information flow asymmetry" />
+
+        <p>
+            <strong>Component 2:</strong> The neurons we grow into the brain
+            need some type of <em>“housing”</em>; we can’t just sprinkle
+            them on the host brain and expect them to do what we want.
+            First, this <strong>retinal ganglion cell containment</strong>
+            needs to guide axons to where we want them to go (->
+            host-brain), and second, it should enable us to stimulate single
+            axon channels. At the same time, the whole device should be as
+            small as possible, because it eventually needs to fit under the
+            skull.  
+        </p>
+
+        <p>
+            These requirements are fulfilled by thin <strong>silicone
+            membranes</strong>
+            integrating small axon containers (black) and tiny axon channels
+            (gray on red). To stimulate axons within a microchannel, these
+            membranes can be put on glass dishes with electrodes (for
+            testing) or silicone-membrane-electrodes (for final implant).
+        </p>
+
+
         
+        <h1><mark>Which problem is addressed</mark></h1>
+        <p>
+            As mentioned above, the silicone membranes (or microstructures)
+            house retinal ganglion cells and guide their axons towards the
+            desired location. We design our structures so that the
+            outgrowing axons <strong>converge towards a common location: the
+            output channel</strong> (part that is implanted in the future).
+        </p>
+
+        <hr class="top-hr">
+        <p class="emph-block">
+            How can we guide a multitude of axons <br> towards a <span
+            style="color: #CC0000; font-weight: bold"> common
+            location</span>?
+        </p>
+        <hr class="btm-hr">
+
+        <p>
+            The work described here focused on exactly that: Using different
+            microstructure designs, how can we guide a multitude of axons
+            towards a common location? More importantly, how can we
+            <strong>minimize the number of axons growing towards their
+            neighbors</strong>, instead of the output channel? This is
+            crucial because those neighbor-grown axons could overlay two
+            stimulation-electrodes effectively connecting them. This reduces
+            the number of independently-addressable stimulation channels -
+            the bandwidth!
+        </p>
+
+        <img class="default-gif" 
+            height=100% 
+            width=100% 
+            src="media/crossgrowth.gif", 
+            alt="information flow asymmetry" />
+            
+        <p>
+            We <strong>designed 21 different microstructures</strong> that aim
+            to <strong>directionally</strong> grow axons from the seeding
+            container to the output channel. By exploiting different axon-growth
+            properties, we bias the growth away from neighbouring seeding wells.
+            These 21 microstructures implement different <strong>design
+            variables</strong> to find out how to best guide axon growth. Going
+            into the details and rationale behind these designs would be quite
+            lengthy, so for now, I won't dive deeper. 
+        </p>
+
+
+        <img class="default-svg" 
+            height=100% 
+            width=100% 
+            src="media/which_designs.png", 
+            alt="information flow asymmetry" />
+    
+            
+        <h1><mark>How to measure directional axon growth</mark></h1>
         
-        <svg>
+        <p>
+            Out of 21 designs, the goal here was to find the best performing
+            one - a design guiding axons directionally to the
+            output channel, and away from the neighbouring electrodes. We
+            considered different screens for measuring if a microstructure
+            design achieves high directionality. Because we had many
+            different designs (21) and axon growth is highly probabilistic
+            (high variance -> high sample size required), we needed a
+            <strong>measurement with high throughput.</strong>
+        </p>
 
-        </svg>
+        <p>
+            As the title suggests, we settled on <strong>tracking growth
+            cones</strong> during the initial outgrowth phase to infer
+            whether axons grow correctly or incorrectly.  After seeding the
+            retinal ganglion cells, we let them settle for 2 days. Then we
+            put the culture under a <strong>confocal microscope and recorded
+            outgrowth for 4-5 days.</strong>
+            One such time lapse recording (crop) is shown below.
+        </p>
 
+        <img 
+            height=100% 
+            width=100% 
+            src="media/tl13_D12_G013_assoc_dets_unlbled_outgrowth.gif", 
+            alt="information flow asymmetry" />
+            
+        <p>
+            One can see that many axons are moving correctly towards the output
+            channel (bottom/ seeding wells to top/ output channel), but some
+            also grow backwards in the direction of neighbors. Because it would
+            be completely unrealistic to track all those growth cones manually,
+            we build a <strong>growth cone tracking model</strong>, short
+            <strong>AxTrack</strong>. With tracked cones, we could directly
+            infer whether axons grow correctly or incorrectly!
+        </p>
+        
+        <h1><mark>Machine learning-based growth cone tracking</mark></h1>
+        <p style="margin-bottom: 1em;">
+            How can we track an unknown number of objects over multiple
+            frames? In machine learning-based computer vision, this is
+            traditionally done in two steps:
+            <ol>
+                <li>Look at a single frame and <strong>detect all the objects</strong></li>
+                <li>Link frame-wise detections to <strong>identities through time</strong></li>
+            </ol>
+            Let’s look into them in detail.
+        </p>
 
+        <h1><mark>1. Deep learning-based growth cone detection</mark></h1>
+        <p>
+            Object detection is a classical computer vision problem. For
+            about 8 years now, machine learning-based approaches have
+            outperformed methods relying on manual modeling. The workhorse
+            of this trend are
+            <strong>deep convolutional neural networks (CNN)</strong>
+            trained on lots of data with big compute. Our growth cone
+            detector also relies on a CNN. Specifically, we train a one-shot
+            detector which simply means all detections are obtained from a
+            single pass through the CNN.
+        </p>
+        
+        <p>
+            For training, we labeled three timelapse recordings yielding a
+            total of <strong>290 unique axons</strong> distributed over
+            <strong>320 frames</strong> (++ through heavy data
+            augmentation). To alleviate the memory requirements of growth
+            cone detection, we pass small <strong>512x512 tiles</strong>
+            through the CNN, instead of entire ~4K video frames. Those are
+            stitched together in the end again.
+        </p>
+    
+        <p>
+            Even for a human expert it can be difficult to identify growth
+            cones in microchannels with high certainty. One very helpful
+            trick is to
+            <strong>check previous and future frames</strong>, thereby
+            identifying visual similarities and characteristic dynamics. 
+            We try to provide the same information to the CNN by passing
+            <strong>temporal context frames.</strong> 
+        </p>
+
+        <img class="default-svg"
+            height=100% 
+            width=100% 
+            src="media/arch.svg", 
+            alt="information flow asymmetry" />
+
+        <p>
+            In the picture above, each block represents a sequence of
+            2d-convolution - batch normalization - non-linearity. The pink
+            tiles are max-pooling operations, and FC stands for fully
+            connected.
+        </p>
+
+        <p>
+            The architecture is inspired by the widely used
+            You-Only-Look-Once (<a
+            href="https://ieeexplore.ieee.org/document/7780460">YOLO</a>)
+            architecture published by Joseph Redmon et al. in 2016.  The CNN
+            takes in five 512x512 px tiles and learns a mapping to a
+            <strong>3x12x12 label</strong>. We predict the <strong>existence
+            of a growth cone</strong> in 12x12=144 tiny tiles. Then for each
+            of these, we also learn the center <strong>xy-coordinates of the
+            growth cone</strong> within that tiny tile. That’s what the
+            12x12x3 label represents. 
+        </p>
+
+        <h1><mark>2. Graph-based axon identity association</mark></h1>
+        <p>
+            The CNN outputs video frames with detected growth cones.
+            However, we still need to identify which detections correspond
+            to the same growth cone across frames. 
+        </p>
+
+        <hr class="top-hr">
+        <p class="emph-block">
+            Which detections <span style="color: #CC0000; font-weight:
+            bold"> correspond</span> to<br>the same growth cone across
+            frames?
+        </p>
+        <hr class="btm-hr">
+
+        <p>
+            Again, following common practice, we formulate this as an
+            association problem represented by a graph (see <a
+            href="https://arxiv.org/abs/1911.00796">reference</a>).
+            Each detection is represented as a node in the graph; each
+            identity association by an edge capturing the likelihood that
+            two nodes correspond to the same identity. Think of this graph
+            as a long sequence where the length matches the number of video
+            frames. 
+        </p>
+
+        <img class="default-svg"
+            height=100% 
+            width=100% 
+            src="media/MCF_dark.svg", 
+            alt="information flow asymmetry" />
+
+        <p>
+            To define the graph fully, we need to come up with a
+            <strong>cost function</strong> that captures the likelihood that two
+            nodes correspond to each other. In this application, we compute the
+            <strong>A* distances</strong> through the microchannels between
+            detections (A* is a find-shortest-path algorithm). High A*
+            distances between detections result in a high cost. When we now
+            solve the graph for <strong>minimum cost flow</strong> plus
+            appropriate constraints (i.e. each node has one entry-, one exit
+            edge), we get the <em>“most likely”</em> associations between detections. 
+        </p>
+
+        <h1><mark>How AxTrack performs</mark></h1>
+        <p style="margin-bottom: 1em">
+            How well does it work? It performs quite well; see for yourself!
+        </p>
+        <img class="default-gif"
+            height=100% 
+            width=100% 
+            src="media/tl13_D12_G013_assoc_dets_lbled_outgrowth.gif", 
+            alt="information flow asymmetry" />
+        
+        <p>
+            The quantitative performance measures also look good. Only 27% of
+            all detections are false-positives, and 21% are false-negatives.
+            When doing the association step afterwards, the false negative rate
+            increases to 32%. Still, the model <strong>tracks 55% of axons more
+            than 80% of the time, and 25% of all axons between 20%-80%</strong>
+            of the time. See below. 
+        </p>
+
+        <img class="default-svg"
+        height=100% 
+        width=100% 
+        src="media/performance.svg", 
+        alt="information flow asymmetry" />
+    
+        <h1><mark>Growth velocity from tracking</mark></h1>
+        <p>
+            This little methods excursion summarised how we track axon growth
+            cones in microscopy data. Let's recall why this tool is useful for
+            us: we want to <strong> measure if axons grow towards the desired
+            location</strong>, the output channel, or away from it towards
+            neighboring seeding wells. Measuring this across the 21 different
+            PDMS designs would reveal <strong>how to best guide axons</strong>
+            from many source locations to a common convergence point.  
+        </p>
+        
+        <p>
+            While this screen of directionality was the primary motivation
+            behind the tracker, it turns out, we get more information from
+            it than just growth direction over time: The tracker reveals
+            <strong>single axon growth velocities</strong> and detects
+            <strong>stagnating growth</strong>! This comes directly from
+            calculating the spatial distance between detections, then
+            dividing this growth distance by the inter-frame time interval
+            (here 30 minutes).
+        </p>
+        
+        <hr class="top-hr">
+        <p class="emph-block">
+            Specific design feature induces much higher growth velocities:
+            <br> <span style="color: #CC0000; font-weight: bold"><strong>narrow
+            PDMS microchannels</strong> </span>
+
+        </p>
+        <hr class="btm-hr">
+
+        <p>
+            Interestingly, the growth velocity across the 21 PDMS designs
+            actually differs significantly! It turns out that a specific
+            design feature induces much higher growth velocities: <strong>narrow
+            PDMS microchannels</strong>! Check how much faster the axons on the
+            right grow!
+        </p>
+
+        <div class="row">
+            <div class="column">
+                8 um wide channels
+                <img class="default-gif"
+                    height=100% 
+                    width=95% 
+                    src="media/growthspeed2.gif", 
+                    alt="information flow asymmetry" />
+                </div>
+                    
+                <div class="column">
+                    1.5 um wide channels
+                    <img class="default-gif"
+                        height=100% 
+                        width=95% 
+                        src="media/growthspeed1.gif", 
+                        alt="information flow asymmetry" />
+            </div>
+        </div> 
+
+        <p>
+            Additionally, when using narrow channels, the proportion of
+            stagnating axons becomes virtually zero. More intricate design
+            motifs such as 2-joints and rescue loops turn out to slightly
+            slow axon growth. 
+        </p>
+
+        <img class="default-svg"
+            height=100% 
+            width=100% 
+            src="media/viability.svg", 
+            alt="information flow asymmetry" />
+        <p>
+            You may wonder what the colors refer to in these boxplots. Each
+            color represents one of the 21 PDMS designs mentioned before. We
+            can pool these designs into groups by splitting with respect to
+            design features, for example, the channel width: Except D02 &
+            D03 (two blue tones left boxplot), all designs use 8 um wide
+            channels. Below is a summary of all 21 designs.
+        </p>
+
+        <img class="default-svg"
+            height=100% 
+            width=100% 
+            src="media/R_designs.png", 
+            alt="information flow asymmetry" />
+
+        <p>
+            Start looking at <strong>D00, then follow the arrows</strong>.
+            Each arrow represents a changed design variable. For example,
+            from following the arrows we see that D06 and D08 have three
+            2-joints, 8 um channel widths and a directional joining lane. 
+        </p>
+
+        <h1><mark>Design directionality from tracking</mark></h1>
+        <p>
+            After this detour into axon growth velocity, let's return to the
+            directionality performance in those 21 PDMS designs. How can we
+            infer the degree of forward growth towards the output channel
+            using the tracked growth cones? 
+        </p>
+        
+        <p>
+            In the association step for the tracker, do you recall that we
+            use the A* distances through the microchannels to link
+            detections? This calculation of A* distances can be used for
+            other purposes as well. To infer directionality, we simply
+            compute the A* distance to the output channels over time.
+            Because the shortest path to the target location is also the
+            correct one (no detours on preferred direction), we can simply
+            <strong>check if the A* distance to the output channel
+            decreases</strong> over time. Let’s look at an example.
+        </p>
+
+        <img class="default-gif"
+            height=100% 
+            width=100% 
+            src="media/tl13_D12_G013_assoc_dets_Ax064_dist.gif", 
+            alt="information flow asymmetry" />
+
+        <p>
+            This axon named Ax064 decided to loop around a rescue loop, then
+            take off in the wrong direction. Luckily, 5 days after seeding,
+            another rescue loop redirects the axon back on track.  These
+            plots can reveal a lot about axon growth decisions, a parabola
+            for example marks a bad transition (negative slope changes to
+            positive one).
+        </p>
+
+        <img class="default-gif"
+            height=100% 
+            width=100% 
+            src="media/tl13_D12_G013.gif"
+            alt="information flow asymmetry" 
+            style="margin-bottom: 2em;"
+            />
+        
+        <p>
+            When subtracting the initial distance to the output channel, we get
+            a beautiful visualization of how many axons are growing correctly
+            versus incorrectly. We can simply look at each of those gray lines
+            representing an axon and see if the <strong>distance overall
+            increased or decreased</strong>. 
+        </p>
+
+        <h1><mark>Directionality performance</mark></h1>
+        <p>
+            As a simple first metric, let’s compare which proportion of
+            axons grow in the right direction versus the wrong one (the
+            numbers in the plot above).
+        </p>
+            
+            
+        <img class="default-svg"
+            height=100% 
+            width=100% 
+            src="media/R_directionality.svg", 
+            alt="information flow asymmetry" />
+
+        <p>
+            Okay, there is a lot going on in these plots, let’s go through
+            the observations one by one. First, we see that on average about
+            <strong>60% of axons grow correctly</strong> independent of the
+            designs. When splitting the data by design, we don’t find a
+            significant difference in the forward-growth bias. 
+        </p>
+
+        <p>
+            In contrast, we do find that backwards growth across designs
+            does differ significantly. So depending on the microstructure
+            design we use for the implant, we get different degrees of cross
+            growth! Especially the designs D12 to D20 seem to do very well!
+            In those designs, we <strong>only observe about 10% of axons
+            growing towards neighbors</strong>. By the way, the proportions
+            don't necessarily add up to 100% because axons that changed
+            distance by less than 50 um were ignored. 
+        </p>
+
+        <p>
+            However, there is one caveat to the statistics here: When
+            comparing single designs with each other, we don’t find
+            significant differences, so we cannot faithfully rank them. This
+            is because with so many variants (21), the bar for statistical
+            significance rises steeply, and we only have about 8 samples per
+            design. So how can we figure out which designs work best, and
+            which design features matter most?
+        </p>
+
+        <img class="default-svg"
+            height=100% 
+            width=100% 
+            src="media/R_directionality2.svg", 
+            alt="information flow asymmetry" />
+
+        <p>
+            We can increase the sample size by splitting the data
+            design-features-wise, as done in the previous boxplots. This
+            analysis reveals three significant findings on how to design
+            many2one guiding structures:
+        </p>
+                    
+        <hr class="top-hr">
+        <p class="emph-block">
+            
+
+                1. Frequently joining channels using <span style="color:
+                #CC0000; font-weight: bold"><strong>2-joints</strong> </span> 
+                instead of <br>the final lane reduces backwards growth.<br><br>
+                2. <span style="color: #CC0000; font-weight: bold">
+                    <strong>Rescue loops</strong> </span> are reducing
+                    backwards growth and don’t decrease forward
+                    growth.<br><br>
+                3. <span style="color: #CC0000; font-weight: bold">
+                    <strong>Joining early</strong> </span> instead of late
+                    increases forward growth<br> (D05 in blueprint above
+                    joins late).<br>
+        </p>
+        <hr class="btm-hr">
+
+        <h1><mark>How good is the best design</mark></h1>
+        <p>
+            The tracking method successfully identified features that impact
+            directional growth. But the metric we looked at so far is not
+            very tangible. Is it gOoD to have 10% of axons growing
+            incorrectly? How much cross-talk may this relate to? For this
+            reason, we looked at a second metric that is based on the
+            <strong>number of axons reaching the output channel versus the
+            neighbors</strong>. Again, this information can directly be
+            derived from the growth cone tracks.
+        </p>
+
+        <img class="default-svg"
+            height=100% 
+            width=100% 
+            src="media/R_directionality3.svg", 
+            alt="information flow asymmetry" />
+
+        <p>
+            The metric δ was intentionally kept simple to keep it
+            interpretable. We compute a smoothed ratio between the number of
+            axons reaching the output channels and  the neighbors. This
+            yields a fold that tells us how many more axons reach the
+            desired-, versus undesired location. The best performing designs
+            show between <strong>4 and 2.5 </strong> more axons in the output channel than in
+            neighboring wells. As we have seen before, these mainly include
+            designs between 12 and 20 which use a single 2-joint and 3
+            rescue loops. Let’s look at the most directional structure, D20!
+        </p>
+
+        <img class="default-gif"
+            height=100% 
+            width=100% 
+            src="media/tl14_D20_G040_assoc_dets.gif", 
+            alt="information flow asymmetry" />
+    
+        <p>
+            You may wonder why we did not entirely rely on this metric.
+            Well, one drawback is that it focuses solely on final location
+            and we have lots of data where no axons have reached target-, or
+            off-target locations yet. This is also the motivation behind
+            smoothing (+1) - getting more data and weighting small axons
+            counts less.
+        </p>
+
+        <h1><mark>Towards even better guidance</mark></h1>
+        <p>
+            Our best designs already work quite nicely, but we still asked
+            ourselves how they could be improved further. After all, only a
+            few design variables were identified as significant drivers of
+            directional growth. For example, D12-D16 used different 2-joint
+            motifs, but we couldn’t find a significant difference between
+            them. Because of that, we designed new experiments that focus in
+            on the impact of single guidance design motifs. 
+        </p>
+
+        <img class="default-svg"
+            height=100% 
+            width=100% 
+            src="media/blueprints.png", 
+            alt="information flow asymmetry" />
+
+        <p>
+            I won't go into the details of these experiments because the results
+            are quite preliminary and need a few more samples to back the
+            findings. These experiments go into the nitty-gritty details of
+            designing PDMS guidance microstructures, a topic I don't want to
+            open up. Just beware there is a path forward to engineer even more
+            directional microstructures.
+        </p>
+    
+        <h1><mark>Closing words</mark></h1>
+        
+        <p>
+            As for what to do next, we should confirm the <strong>directional
+            information flow (electrical signals)</strong> through these
+            designs. So far we only looked through an anatomical lens. There
+            likely is also a lot of headroom to increase tracking performance by
+            deviating from the one-shot approach, incorporating dynamics
+            constraints on detection association, and training on more data. 
+        </p>
+        <p >
+            Here is the what to remember in 4 points:
+        </p>
+        <hr class="top-hr">
+        <p class="emph-block">
+            1. Current brain stimulation technology suffers from <span style="color:
+            #CC0000; font-weight: bold"><strong>low spatial resolution</strong></span>.<br><br>
+
+            2. Biohybrid implants potentially solve this - but require <span style="color:
+            #CC0000; font-weight: bold"><strong>directionally grown axons</strong></span>. <br><br>
+
+            3. AxTrack model identified PDMS designs with <span style="color:
+            #CC0000; font-weight: bold"><strong> nearly 4-fold directionality</strong></span>. <br><br>
+
+            4. This achieves <span style="color:
+            #CC0000; font-weight: bold"><strong>higher bandwidth</strong> </span> biohybrid interfaces (yay:)
+        </p>
+        <hr class="btm-hr">
+
+        <div class="row">
+            <div class="column">
+                <img class="default-gif"
+                    height=100% 
+                    width=80% 
+                    src="media/axon_inout.gif", 
+                    alt="information flow asymmetry" />
+                </div>
+                    
+                <div class="column">
+                    <img class="default-gif"
+                        height=100% 
+                        width=80% 
+                        src="media/simpsons-in-and-out2.gif", 
+                        alt="information flow asymmetry" />
+            </div>
+        </div> 
     </section>
-
-
 </body>
-<iframe src="https://docs.google.com/document/d/e/2PACX-1vSBMVgPt2WD7MLPU6R9vl8rBoY67vDagKrisGzDW582xEfnQLPZuKFvoGm87Doi1N6P57VHwdayHzUw/pub?embedded=true" frameborder="0" scrolling="yes" height="15000" width="800"></iframe>
+<!-- <iframe src="https://docs.google.com/document/d/e/2PACX-1vSBMVgPt2WD7MLPU6R9vl8rBoY67vDagKrisGzDW582xEfnQLPZuKFvoGm87Doi1N6P57VHwdayHzUw/pub?embedded=true" frameborder="0" scrolling="yes" height="15000" width="800"></iframe> -->
 </html>
